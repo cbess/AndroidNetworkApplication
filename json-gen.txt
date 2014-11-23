@@ -1,0 +1,17 @@
+[
+  '{{repeat(7)}}',
+  {
+    _id: '{{objectId()}}',
+    sortOrder: '{{index()}}',
+    title: '{{firstName()}} {{lorem(2, "words")}}',
+    color: '{{random("blue", "orange", "green")}}',
+    imageUrl: function(tags) {
+        var urls = [
+            'https://c2.staticflickr.com/4/3843/15021256516_f4d2031beb_c.jpg',
+            'https://c1.staticflickr.com/3/2824/9127039811_5af100a631_c.jpg',
+            'https://c2.staticflickr.com/6/5560/14560327186_e8ce5affd4_b.jpg'
+        ];
+        return urls[tags.integer(0, urls.length - 1)];
+    }
+  }
+]

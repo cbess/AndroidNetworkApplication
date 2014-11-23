@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- JSON API: http://beta.json-generator.com/HxTlF9X -->
+    <string name="images_items_url">http://beta.json-generator.com/api/json/get/HxTlF9X</string>
+</resources>
