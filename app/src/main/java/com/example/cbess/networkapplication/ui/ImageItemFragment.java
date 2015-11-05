@@ -1,13 +1,11 @@
 package com.example.cbess.networkapplication.ui;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.app.ListFragment;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import com.example.cbess.networkapplication.R;
 import com.example.cbess.networkapplication.model.ImageItem;
 import com.example.cbess.networkapplication.network.ApiClient;
 import com.example.cbess.networkapplication.ui.adapter.ImageItemArrayAdapter;
@@ -93,7 +91,7 @@ public class ImageItemFragment extends ListFragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        public void onFragmentInteraction(ImageItem item);
+        void onFragmentInteraction(ImageItem item);
     }
 
 }

@@ -5,7 +5,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Represents an Image item model.
@@ -18,7 +17,7 @@ public class ImageItem {
     private int mSortOrder;
 
     public static ArrayList<ImageItem> getImageItemsFromJson(JSONArray objects) {
-        ArrayList<ImageItem> items = new ArrayList<ImageItem>();
+        ArrayList<ImageItem> items = new ArrayList<>();
 
         try {
             // build concrete objects from the json
