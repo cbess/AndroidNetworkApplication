@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:weightSum="1"
-              android:orientation="vertical"
-              android:gravity="center_horizontal"
-              android:padding="@dimen/default_padding">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.example.cbess.networkapplication.ui.view.ImageItemRowView.RowData"/>
+    </data>
 
-    <ImageButton
-        android:layout_width="300dp"
-        android:layout_height="135dp"
-        android:id="@+id/image"
-        android:layout_weight="0"
-        android:scaleType="centerCrop"
-        android:background="@android:color/transparent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding"
+        android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/empty_title"
-        android:id="@+id/title"
-        />
+        <ImageButton
+            android:id="@+id/image"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{item.imageUrl}"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.title ?? @string/empty_title}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+    </LinearLayout>
+</layout>
