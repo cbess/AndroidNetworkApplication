@@ -13,8 +13,6 @@ public class ImageItem {
     private String mId;
     private String mTitle;
     private String mImageUrlString;
-    private String mColorName;
-    private int mSortOrder;
 
     public static ArrayList<ImageItem> getImageItemsFromJson(JSONArray objects) {
         ArrayList<ImageItem> items = new ArrayList<>();
@@ -38,18 +36,8 @@ public class ImageItem {
 
     protected void loadJson(JSONObject jsonObject) throws JSONException {
         mId = jsonObject.getString("_id");
-        mSortOrder = jsonObject.getInt("sortOrder");
-        mColorName = jsonObject.getString("color");
         mTitle = jsonObject.getString("title");
         mImageUrlString = jsonObject.getString("imageUrl");
-    }
-
-    public int getSortOrder() {
-        return mSortOrder;
-    }
-
-    public String getColorName() {
-        return mColorName;
     }
 
     public String getImageUrlString() {
