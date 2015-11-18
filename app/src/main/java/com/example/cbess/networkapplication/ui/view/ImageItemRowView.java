@@ -41,7 +41,7 @@ public class ImageItemRowView extends LinearLayout {
     }
 
     public void setImageItem(ImageItem imageItem) {
-        mBinding.setItem(new RowData(imageItem));
+        mBinding.setItem(imageItem);
         // update views from the binding info
         mBinding.executePendingBindings();
 
@@ -49,13 +49,4 @@ public class ImageItemRowView extends LinearLayout {
         loadView();
     }
 
-    public static class RowData {
-        public String title;
-        public String imageUrl;
-
-        public RowData(ImageItem item) {
-            title = item.getTitle();
-            imageUrl = item.getImageUrlString();
-        }
-    }
 }
