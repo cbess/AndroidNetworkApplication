@@ -1,5 +1,10 @@
 package com.example.cbess.networkapplication.model;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
+import com.example.cbess.networkapplication.BR;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Represents an Image item model.
  */
-public class ImageItem {
+public class ImageItem extends BaseObservable {
     private String mId;
     private String mTitle;
     private String mImageUrlString;
@@ -40,10 +45,22 @@ public class ImageItem {
         mImageUrlString = jsonObject.getString("imageUrl");
     }
 
+    public void setImageUrlString(String imageUrlString) {
+        mImageUrlString = imageUrlString;
+        notifyPropertyChanged(BR.imageUrlString);
+    }
+
+    @Bindable
     public String getImageUrlString() {
         return mImageUrlString;
     }
 
+    public void setTitle(String title) {
+        mTitle = title;
+        notifyPropertyChanged(BR.title);
+    }
+
+    @Bindable
     public String getTitle() {
         return mTitle;
     }
