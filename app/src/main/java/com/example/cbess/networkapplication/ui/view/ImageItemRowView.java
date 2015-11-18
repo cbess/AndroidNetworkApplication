@@ -32,7 +32,8 @@ public class ImageItemRowView extends LinearLayout {
     public ImageItemRowView(Context ctx, ImageItem imageItem) {
         this(ctx);
 
-        mBinding = DataBindingUtil.inflate(LayoutInflater.from(ctx), R.layout.view_image_item_row, this, true);
+        mBinding = DataBindingUtil.inflate(
+                LayoutInflater.from(ctx), R.layout.view_image_item_row, this, true);
         setImageItem(imageItem);
     }
 
