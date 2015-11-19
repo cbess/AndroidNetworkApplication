@@ -11,5 +11,5 @@ Use the [json-gen.txt](json-gen.txt) to generate the data source again, if it fa
 
 ### Helpful links
 
-- https://developer.android.com/tools/data-binding/guide.html
-- https://realm.io/news/data-binding-android-boyar-mount/
+- [DataBinding Guide](https://developer.android.com/tools/data-binding/guide.html)
+- [Realm.io with developers from Google](https://realm.io/news/data-binding-android-boyar-mount/) - helped me understand `BindingAdapter` and other advanced stuff.
