@@ -2,12 +2,10 @@ package com.example.cbess.networkapplication.ui.view;
 
 import android.content.Context;
 import android.databinding.BindingAdapter;
-import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.example.cbess.networkapplication.R;
 import com.example.cbess.networkapplication.databinding.ViewImageItemRowBinding;
 import com.example.cbess.networkapplication.model.ImageItem;
 import com.squareup.picasso.Picasso;
@@ -32,8 +30,7 @@ public class ImageItemRowView extends LinearLayout {
     public ImageItemRowView(Context ctx, ImageItem imageItem) {
         this(ctx);
 
-        mBinding = DataBindingUtil.inflate(
-                LayoutInflater.from(ctx), R.layout.view_image_item_row, this, true);
+        mBinding = ViewImageItemRowBinding.inflate(LayoutInflater.from(ctx), this, true);
         setImageItem(imageItem);
     }
 
@@ -43,8 +40,6 @@ public class ImageItemRowView extends LinearLayout {
 
     public void setImageItem(ImageItem imageItem) {
         mBinding.setItem(imageItem);
-        // update views from the binding info
-        mBinding.executePendingBindings();
 
         // perform custom updating
         loadView();
